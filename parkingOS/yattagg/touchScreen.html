@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" type="text/css" href="css/styleTouchScreen.css"><title>Торкніться екрану</title><body><div class="wrapper"><ul class="highBar">
+    <li id='highBarTime'></li>
+    <li id='highBarLangRus' class='active'>УКР</li>
+    <li id="highBarLangEng">ENG</li></ul><ul class="operationSuccesful">
+    <li id="touchScreen"><h2>Торкніться екрану</h2></li>
+    <li class="imgN"><img id="handFing" src="images/handFing.png"</li>
+</ul><ul class="footerBar">
+    <li id="numberParcomat"></li>
+    <li class="serviceHelp"><a href="#" target="_blank">Служба підтримки</a></li>
+</ul><script>
+    window.onload = ()=>{
+        let date = new Date();
+        document.getElementById('highBarTime').innerHTML = date.getHours() + ':' + date.getMinutes();
+        let rus = document.getElementById('highBarLangRus'),
+            eng = document.getElementById('highBarLangEng'),
+            langArr = [rus, eng],
+            parkRobot = {
+                location:"Where is this robot locate?",
+                numberParkRobot:360
+            };
+            document.getElementById('numberParcomat').innerHTML = "Паркомат №" +  parkRobot.numberParkRobot;
+            for(var i = 0;i < langArr.length;i++){
+                langArr[i].addEventListener('click', function(){
+                    if(event.target.id == "highBarLangEng"){
+                        eng.classList.add('active');
+                        rus.classList.remove('active');
+                    }
+                    else if(event.target.id == "highBarLangRus"){
+                        rus.classList.add('active');
+                        eng.classList.remove('active');
+                    }
+                })
+            }
+    }
+</script></div class="wrapper"></body></head></html>

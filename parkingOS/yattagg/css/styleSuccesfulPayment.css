@@ -1,0 +1,93 @@
+body{
+        margin:0;
+        padding:0;
+        font:16px arial;
+}
+a{
+        text-decoration: none;
+}
+img{
+        background-position: center;
+}
+.imgN > img{
+        margin-left: 90px;
+}
+.wrapper{
+        max-width: 960px;
+        min-width:360px;
+        margin:0 auto;
+        background-color: #161233;
+        color:#F4F3FB;
+        box-sizing: border-box;
+}
+ul{
+        list-style:none;
+}
+h2{
+        font-size:40px;
+        font-weight: 46px;
+}
+h3{
+        font-size:22px;
+}
+.highBar{
+        padding-top:20px;
+        display:flex;
+        margin-bottom:150px;
+        box-sizing: border-box;
+}
+.highBar > li{
+        margin-left:44%;
+        font-size:20px;
+}
+.highBar > li:nth-child(2){
+        cursor: pointer;
+        margin-left: calc(30% + 5%);
+        font-size:24px;
+        color:#76CEE4;
+}
+.highBar > li:nth-child(2):hover,
+.highBar > li:nth-child(3):hover{
+        cursor: pointer;
+        color:#F4F3FB;
+        border-bottom: 2px solid #F4F3FB;
+}
+.active{
+        color: #F4F3FB !important;
+        border-bottom: 2px solid #F4F3FB;
+}
+.highBar > li:nth-child(3){
+        cursor: pointer;
+        margin-left:2%;
+        font-size:24px;
+        color:#76CEE4;
+}
+.operationSuccesful{
+        margin-left: 30%;
+}
+.operationSuccesful > li:nth-child(3){
+        padding-left:3%;
+        color:#76CEE4;
+}
+.footerBar{
+        margin-top:150px;
+        overflow: hidden;
+        padding:10px;
+}
+#numberParcomat{
+        float:left;
+        background-image:url('../images/parkingLogo.png');
+        background-repeat: no-repeat;
+        padding: 13px 0px 13px 60px;
+        box-sizing: border-box;
+}
+.serviceHelp{
+        float:right;
+        padding:13px 0px 13px 0px;
+}
+.serviceHelp > a:nth-child(1):hover{
+        color:#F4F3FB;
+}
+.serviceHelp > a:nth-child(1){
+        color:#76CEE4;
+}

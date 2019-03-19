@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" type="text/css" href="css/styleAmountParkingTime.css"><title>Оплата успішна</title></head><body><div class="wrapper"><ul class="highBar">
+    <li><a href="#"><img src="images/back.png"></a></li>
+    <li id='highBarTime'></li>
+    <li id="langToolBar">
+        <div id='highBarLangRus' class='active'>УКР</div>
+        <div id='highBarLangEng'>ENG</div>
+    </li>
+    </ul><ul class="spaceInput">
+    <li><div class="diff" id="diffOne">-</div></li>
+    <li><span class="amount" id="amountOne">00</span></li>
+    <li><div class="plus" id="plusOne">+</div></li>
+    <li><div class="diff" id="diffTwo">-</div></li>
+    <li><span class="amount" id="amountTwo">00</span></li>
+    <li><div class="plus" id="plusTwo">+</div></li>
+</ul><ul class="textUnderButt">
+    <li class="textUnderButt">мінімум: 1 година</li>
+    <li class="textUnderButt" id="rightText">крок: 15 хвилин</li>
+</ul><ul class="operationSuccesful">
+    <li><h3>ДО СПЛАТИ</h3></li>
+</ul><ul class="footerBar">
+    <li id="numberParcomat"></li>
+    <li class="forward"><a href="#" target="_blank"><img src="images/grn.png"></li></li>
+    <li class="serviceHelp"><a href="#" target="_blank">Служба підтримки</a></li>
+</ul><script>
+    window.onload = ()=>{
+        let date = new Date();
+        document.getElementById('highBarTime').innerHTML = date.getHours() + ':' + date.getMinutes();
+        let rus = document.getElementById('highBarLangRus'),
+            eng = document.getElementById('highBarLangEng'),
+            langArr = [rus, eng],
+            parkRobot = {
+                location:"Where is this robot locate?",
+                numberParkRobot:360
+            };
+            document.getElementById('numberParcomat').innerHTML = "Паркомат №" +  parkRobot.numberParkRobot;
+            for(var i = 0;i < langArr.length;i++){
+                langArr[i].addEventListener('click', function(){
+                    if(event.target.id == "highBarLangEng"){
+                        eng.classList.add('active');
+                        rus.classList.remove('active');
+                    }
+                    else if(event.target.id == "highBarLangRus"){
+                        rus.classList.add('active');
+                        eng.classList.remove('active');
+                    }
+                })
+            }
+            let looperOne = 0;
+            let looperTwo = 0;
+            let plusDiff = document.querySelectorAll('.diff, .plus');
+            let amountOne = document.getElementById('amountOne');
+            let amountTwo = document.getElementById('amountTwo');
+            plusDiff.forEach(function(button, index){
+                button.addEventListener('click', function(el){
+                    if(button.id == "plusOne"){
+                        looperOne++;
+                        if(looperOne > 9){
+                            amountOne.innerHTML = looperOne;
+                        }
+                        else{
+                            amountOne.innerHTML = '0' +  looperOne;
+                        }
+                    }
+                    else if(button.id == "diffOne"){
+                        looperOne--;
+                        if(looperOne < 0){
+                            looperOne = 0;
+                            amountOne.innerHTML = '00';
+                        }
+                        else{
+                            amountOne.innerHTML = '0' +   looperOne;
+                        }
+                    }
+                    else if(button.id == "plusTwo"){
+                        looperTwo++;
+                        if(looperTwo > 9){
+                            amountOne.innerHTML = looperTwo;
+                        }
+                        else{
+                            amountTwo.innerHTML = '0' +   looperTwo;
+                        }
+                    }
+                    else if(button.id == "diffTwo"){
+                        looperTwo--;
+                        if(looperTwo < 0){
+                            looperTwo = 0;
+                            amountTwo.innerHTML = '00';
+                        }
+                        else{
+                            amountTwo.innerHTML = '0' +   looperTwo;
+                        }
+                    }
+                })
+            })
+    }
+</script></div class="wrapper"></body></html>

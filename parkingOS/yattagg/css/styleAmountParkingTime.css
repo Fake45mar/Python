@@ -1,0 +1,213 @@
+body{
+        margin:0;
+        padding:0;
+        font:16px arial;
+}
+a{
+        text-decoration: none;
+}
+img{
+        background-position: center;
+}
+.imgN > img{
+        margin-left: 90px;
+}
+.wrapper{
+        max-width: 960px;
+        min-width:360px;
+        margin:0 auto;
+        background-color: #161233;
+        color:#F4F3FB;
+        box-sizing: border-box;
+}
+ul{
+        list-style:none;
+}
+h2{
+        font-size:40px;
+        font-weight: 46px;
+}
+h3{
+        font-size:22px;
+}
+ul{
+        padding:0;
+        margin:0;
+}
+.highBar{
+        padding-top:20px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+}
+.highBar > li:nth-child(1){
+        margin-left:0 !important;
+}
+.highBar > li{
+        font-size:24px !important;
+        margin-left:0 auto;
+}
+#langToolBar{
+        display:flex;
+}
+#highBarLangRus{
+        color:#76CEE4;
+}
+#highBarLangEng{
+        color:#76CEE4;
+}
+#highBarLangRus:hover,
+#highBarLangEng:hover{
+        cursor: pointer;
+        color:#F4F3FB;
+        border-bottom: 2px solid #F4F3FB;
+}
+#highBarLangEng{
+        margin: 0px 55px 0px 25px;
+}
+.active{
+        color: #F4F3FB !important;
+        border-bottom: 2px solid #F4F3FB;
+}
+#numberOfVehicle{
+        width:545px;
+        line-height:105px;
+        resize:none;
+        background-color:#0E0E1A;
+        font-size:76px;
+        border:1px solid #76CEE4;
+        border-radius: 10px;
+        padding-left:25px;
+        box-sizing: content-box;
+        color:#E8E7EC;
+        font-weight:600;
+}
+.operationSuccesful{
+        text-align: center;
+        margin: 0 auto;
+        color:#76CEE4;
+}
+.operationSuccesful > li:nth-child(3){
+        padding-left:0 auto;
+        color:#76CEE4;
+}
+.footerBar{
+        margin-top:20px;
+        overflow: hidden;
+        padding:10px;
+        display:flex;
+}
+#numberParcomat{
+        background-image:url('../images/parkingLogo.png');
+        background-repeat: no-repeat;
+        padding: 13px 0px 13px 60px;
+        box-sizing: border-box;
+}
+.serviceHelp{
+        padding:13px 0px 13px 0px;
+        margin:0 auto;
+}
+.footerBar > li:nth-child(1),
+.serviceHelp{
+        margin-top:30px;
+}
+.serviceHelp > a:nth-child(1):hover{
+        color:#F4F3FB;
+}
+.serviceHelp > a:nth-child(1){
+        color:#76CEE4;
+}
+.keyboard{
+        display: flex;
+        align-items: center;
+        width:76px;
+        height:76px;
+        background-color:#E8E7EC;
+        color:#161233;
+        font-size:46px;
+        margin:2px;
+        text-align: center;
+        border-radius:3px;
+        justify-content: center; 
+        font-weight:600;
+}
+.keyHolder{
+        display:flex;
+        justify-content: center;
+        margin-left:0 auto;
+}
+.buttonBlue{
+        width:150px;
+        height:76px;
+        display: flex;
+        margin:2px;
+        align-items: center;
+        justify-content: center; 
+        background-color:#76CEE4;
+        color:#161233;
+        font-size:36px;
+        border-radius:3px;
+        font-weight:600;
+}
+.keyboard:hover,
+.buttonBlue:hover{
+        cursor: pointer;
+        background-color: #F0FF9A;
+}
+.forward{
+        margin-left:10%;
+}
+#num, #del{
+        display:block;
+        cursor:pointer;
+}
+#num{
+        width:120px;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+}
+.spaceInput{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:20px 0 10px;
+}
+#buttonNumbers{
+        display: none;
+}
+.diff,
+.plus{
+        cursor: pointer;
+        width:60px;
+        height:60px;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:#161233;
+        background-color:#807D90;
+        font-size: 60px;
+}
+.diff:hover,
+.plus:hover{
+        background-color: #F0FF9A;
+}
+.activeButt{
+        background-color:#76CEE4; 
+}
+.textUnderButt{
+        font-size: 24px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+}
+.amount{
+        font-size: 100px;
+}
+#numberParcomat,
+.serviceHelp{
+        margin-top:200px;
+}

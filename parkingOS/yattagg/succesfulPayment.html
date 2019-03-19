@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" type="text/css" href="css/styleSuccesfulPayment.css"><title>Оплата успішна</title><body><div class="wrapper"><ul class="highBar">
+    <li id='highBarTime'></li>
+    <li id='highBarLangRus' class='active'>УКР</li>
+    <li id="highBarLangEng">ENG</li></ul><ul class="operationSuccesful">
+    <li class="imgN"><img src="images/checkMark.png"</li>
+    <li><h2>оплата успішна</h2></li>
+    <li><h3>не забудьте забрати чек</h3></li>
+</ul><ul class="footerBar">
+    <li id="numberParcomat"></li>
+    <li class="serviceHelp"><a href="#" target="_blank">Служба підтримки</a></li>
+</ul><script>
+    window.onload = ()=>{
+        let date = new Date();
+        document.getElementById('highBarTime').innerHTML = date.getHours() + ':' + date.getMinutes();
+        let rus = document.getElementById('highBarLangRus'),
+            eng = document.getElementById('highBarLangEng'),
+            langArr = [rus, eng],
+            parkRobot = {
+                location:"Where is this robot locate?",
+                numberParkRobot:360
+            };
+            document.getElementById('numberParcomat').innerHTML = "Паркомат №" +  parkRobot.numberParkRobot;
+            for(var i = 0;i < langArr.length;i++){
+                langArr[i].addEventListener('click', function(){
+                    if(event.target.id == "highBarLangEng"){
+                        eng.classList.add('active');
+                        rus.classList.remove('active');
+                    }
+                    else if(event.target.id == "highBarLangRus"){
+                        rus.classList.add('active');
+                        eng.classList.remove('active');
+                    }
+                })
+            }
+    }
+</script></div class="wrapper"></body></head></html>
